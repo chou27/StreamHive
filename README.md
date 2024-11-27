@@ -1,40 +1,47 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+StreamHive
+StreamHive is a cutting-edge live streaming platform designed for both streamers and viewers. It integrates essential features for a seamless experience, including RTMP/WHIP streaming, OBS integration, real-time chat, and user interaction tools. This project is built with Next.js (TypeScript) and PostgreSQL for efficient data handling and scalability.
 
-## Getting Started
+Features
+Live Streaming: RTMP and WHIP support for high-quality streams.
+Real-Time Chat: Engage with viewers through interactive chat.
+User Authentication: Secure user login and registration with JWT tokens.
+Streamer Dashboard: Monitor and manage streams, view analytics.
+Push Notifications: Get notifications about stream events and user activities.
+Database: PostgreSQL for robust and scalable data management.
+OBS Integration: Easily set up and start streaming with OBS Studio.
 
-First, run the development server:
-
-```bash
+Installation
+Prerequisites
+Node.js (v16+)
+PostgreSQL database
+Setup Steps
+Clone the repository:
+git clone https://github.com/chou27/StreamHive.git
+Navigate to the project directory:
+cd StreamHive
+Install dependencies:
+npm install
+Create a .env.local file with your environment variables. Example:
+DATABASE_URL=postgresql://user:password@localhost:5432/streamhive
+JWT_SECRET=your_jwt_secret
+Run migrations to set up your database:
+npx prisma migrate deploy
+Start the development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit http://localhost:3000 to access the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Technologies Used
+Next.js (TypeScript) for the frontend and SSR.
+PostgreSQL for database management.
+Prisma ORM for easy database interaction.
+OBS Studio integration for stream setup.
+Tailwind CSS for responsive UI design.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Database Structure
+User: Handles authentication and profile management.
+Stream: Manages live stream information, status, and viewer count.
+Chat: Stores messages and user interactions during streams.
+Running Tests
+To run tests, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# StreamHive
->>>>>>> e776c341d54990f0a7ef3723cb8e07b61299b399
+npm run test
