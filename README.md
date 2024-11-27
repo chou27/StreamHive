@@ -18,24 +18,29 @@ StreamHive is a cutting-edge live streaming platform designed for streamers and 
 - PostgreSQL database
 
 ### Setup Steps
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/chou27/StreamHive.git
-2.Install dependencies:
+2.**Install dependencies**:
   ```bash
    npm install
-3.Create a .env.local file with the following environment variables:
+```
+3.**Create a .env.local file with the following environment variables**:
   ```bash
   DATABASE_URL=postgresql://user:password@localhost:5432/streamhive
-JWT_SECRET=your_jwt_secret
-4. Run database migrations:
+  JWT_SECRET=your_jwt_secret
+```
+4. **Run database migrations**:
   ```bash
    npx prisma migrate deploy
-5. Start the development server:
+```
+5.**Start the development server**:
    ```bash
    npm run dev
-6.Visit http://localhost:3000 to see the app in action.
- ```
+```
+6.**Visit http://localhost:3000 to see the app in action.**
+
+ 
 
 ## Technologies Used
 - **Next.js** (TypeScript) for frontend development and server-side rendering (SSR).
